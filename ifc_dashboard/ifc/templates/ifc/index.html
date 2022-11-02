@@ -1,0 +1,9 @@
+{% if organization_list %}
+    <ul>
+    {% for organization in organization_list %}
+        <li><a href="{% url 'organization_detail' organization.id %}">{{ organization.organization_name}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No organizations are available.</p>
+{% endif %}
